@@ -1,12 +1,73 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>My Website</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
+    <head>
+        <title>HorizonStart</title>
+        <link rel="stylesheet" href="styles.css">
+        <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    
+    <div class="Search">
+        <div class="clock">
+            <span id="clock"></span>
+        </div>
+        <div class="search-bar">
+            <div class="search-animation">
+                <span id="search-animation"></span>
+            </div>
+            <input type="text" id="search-input" placeholder="Search on Google" />
+        </div>
+    </div>
+    <div class="Weather">
+        <div class="today">
+            <div class="today-left">
+                <div class="today-current-temp" id="today-current-temp"></div>
+                <div class="today-left-bottom">
+                    <div class="today-max-temp" id="today-max-temp"></div>
+                    <div class="today-min-temp" id="today-min-temp"></div>
+                </div>
+            </div>
+            <div class="today-right">
+                <div class="today-date" id="today-date"></div>
+                <div class="today-icon" id="today-icon">
+                    <span class="today-symbol"id="today-icon-i">cloudy</span>
+                </div>
+            </div>
+        </div>
+        <div class="tomorrow">
+            <div class="tomorrow-left">
+                <div class="tomorrow-current-temp" id="tomorrow-current-temp"></div>
+                <div class="tomorrow-left-bottom">
+                    <div class="tomorrow-max-temp" id="tomorrow-max-temp"></div>
+                    <div class="tomorrow-min-temp" id="tomorrow-min-temp"></div>
+                </div>
+        </div>
+        <div class="tomorrow-right">
+            <div class="tomorrow-date" id="tomorrow-date"></div>
+            <div class="tomorrow-icon" id="tomorrow-icon">
+                <span class="tomorrow-symbol" id="tomorrow-icon-i">cloudy</span>
+            </div>
+        </div>
+    </div>
+    <div class="lastday">
+        <div class="lastday-left">
+            <div class="lastday-current-temp" id="lastday-current-temp"></div>
+            <div class="lastday-left-bottom">
+                <div class="lastday-max-temp" id="lastday-max-temp"></div>
+                <div class="lastday-min-temp" id="lastday-min-temp"></div>
+            </div>
+    </div>
+    <div class="lastday-right">
+        <div class="lastday-date" id="lastday-date"></div>
+        <div class="lastday-icon" id="lastday-icon">
+            <span class="lastday-symbol" id="lastday-icon-i">cloud</span>
+        </div>
+    </div>
+    </div>
+
+    <div class="settings-menu" id="settings-menu">
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

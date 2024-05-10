@@ -1,0 +1,181 @@
+@font-face {
+    font-family: 'Material Symbols Outlined';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v156/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHOej.woff2) format('woff2');
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    color: #ffffff;
+    font-family: Arial;
+    background-image: url("./Background.jpg");
+    background-color: #0e4fd1;
+    background-size: cover;
+    background-position: center;
+}
+
+.Search {
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock {
+    font-size: 72px;
+    margin-bottom: 40px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 40px;
+    background-color: #29c178;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 0 10px;
+    font-size: 16px;
+    background-color: #3b4252;
+    color: #eceff4;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.search-bar input[type="text"]:hover {
+    animation-play-state: paused;
+}
+
+.search-bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.search-bar:hover::before {
+    opacity: 1;
+}
+
+.Weather {
+    margin-top: auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    height: 130px;
+}
+
+.today,
+.tomorrow,
+.lastday {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+    width: 400px;
+    height: 130px;
+    border-radius: 20px;
+    background: linear-gradient(91deg, rgba(30, 30, 30, 0.95) 0%, rgba(30, 30, 30, 0.85) 100%);
+}
+
+.today-left,
+.tomorrow-left,
+.lastday-left,
+.today-right,
+.tomorrow-right,
+.lastday-right {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+}
+
+.today-current-temp,
+.tomorrow-current-temp,
+.lastday-current-temp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 100%;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.today-left-bottom,
+.tomorrow-left-bottom,
+.lastday-left-bottom {
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    width: 100%;
+}
+
+.today-max-temp,
+.tomorrow-max-temp,
+.lastday-max-temp,
+.today-min-temp,
+.tomorrow-min-temp,
+.lastday-min-temp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.today-date,
+.tomorrow-date,
+.lastday-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25%;
+    width: 100%;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.today-icon,
+.tomorrow-icon,
+.lastday-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75%;
+    width: 100%;
+}
+
+.today-symbol,
+.tomorrow-symbol,
+.lastday-symbol {
+    font-family: 'Material Symbols Outlined';
+    font-size: 90px;
+}
