@@ -27,11 +27,12 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
     user-select: none;
-    scroll-snap-type: y mandatory; /* Add this line */
-    scroll-behavior: smooth
 }
-/* general */
-/* Text */
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
 
 .title{
     font-family: 'Roboto';
@@ -39,7 +40,6 @@ body {
     color: #fff;
     text-align: center;
     transition: all 0.3s ease;
-    position: sticky;
 }
 
 .subtitle {
@@ -48,7 +48,6 @@ body {
     color: #fff;
     text-align: center;
     transition: all 0.3s ease;
-    position: sticky;
 }
 
 .description {
@@ -59,13 +58,10 @@ body {
     transition: all 0.3s ease;
 }
 
-.text {
+/* .text {
     position: sticky;
     top: 0;
-}
-/* Text */
-
-/* topRow */
+} */
 
 .topRow {
     position: fixed; top: 0; left: 0; right: 0;
@@ -91,9 +87,6 @@ body {
     transition: all 0.3s ease;
 }
 
-/* topRow */
-/* content-1 */
-
 .content {
     display: flex;
     flex-direction: column;
@@ -102,34 +95,33 @@ body {
     width: 100vw;
     height: 100vh;
     padding: 0 25vh;
-    background-color: #08FD67;
+    /* background-color: #08FD67; */
     transition: all 0.3s ease;
-    scroll-snap-align: start; /* Add this line */
-}
-/* 
-.content-title {
+
+    scroll-snap-align: start;
+     /* Add this line */
 }
 
-.content-subtitle {
-}
-
-.content-description {
-}
- */
 .link-TH {
     color: inherit;      /* The color of the text */
     text-decoration: none;   /* No underline */
 }
 
-/* content-1 */
-/* content-2 */
-
+/* .content-1{
+    background-color: #08fd49;
+    
+}
 .content-2{
     background-color: #08C2FD;
 }
 
-/* content-2 */
-/* onScroll */
+.content-3{
+    background-color: #FD08C2;
+}
+
+.content-4{
+    background-color: #FD6708;
+} */
 
 .topRow-onScroll {
     height: 10vh;
@@ -140,17 +132,6 @@ body {
     font-size: 3em;
     height: 8vh;
 }
-
-/* onScroll */
-
-
-
-
-
-
-
-
-
 
 .background {
     z-index: -1;
