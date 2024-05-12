@@ -1,3 +1,4 @@
+/* general */
 @font-face {
     font-family: 'Anurati';
     src: url('src/Anurati.otf') format('opentype');
@@ -5,108 +6,164 @@
     font-style: normal;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
 body {
     background-color: #004c98;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    user-select: none;
+}
+/* general */
+/* Text */
+
+.title {
+    font-family: 'Roboto';
+    font-size: 4em;
+    color: #fff;
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
-.circle-1 {
-    background-color: #08C2FD;
-    width: 20vw;
-    height: 20vw;
-    border-radius: 50%;
-    position: absolute;
-    transform: translate(-70%, -40%);
-}
-.circle-2 {
-    background-color: #08FD67;
-    width: 25vw;
-    height: 25vw;
-    border-radius: 50%;
-    position: absolute;
-    transform: translate(+55%, +30%);
-}
-.card {
-    z-index: 0;
-    width: 30vw;
-    height: calc(0.6 * 30vw);
-    border-radius: 20px;
-    position: absolute;
+.subtitle {
+    font-family: 'Roboto';
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
-.content {
-    z-index: 5;
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.description {
+    font-family: 'Roboto';
+    font-size: 1.5em;
+    color: #fff;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Text */
+/* topRow */
+
+.topRow {
+    position: fixed; top: 0; left: 0; right: 0;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
     flex-direction: row;
-    /* background-color: #08C2FD; */
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 20vh;
+    padding: 0 5vw;
+    /* background-color: #004c98; */
+    transition: all 0.3s ease;
 }
 
 .logo {
-    width: 30%;
-    height: 90%;
-    /* background-color: antiquewhite; */
+    position: relative;
+    /* background-color: #08FD67; */
+    height: 15vh;
+    font-family: 'Anurati';
+    font-size: 5em;
+    color: #fff;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Anurati;
-    font-size: 4em;
-    margin: 5% 0% 5% 5%;
+    transition: all 0.3s ease;
 }
-.info {
-    width: 60%;
-    height: 90%;
-    /* background-color: #08fd41; */
+
+/* topRow */
+/* content-1 */
+
+.content-1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 5% 5% 5% 5%;
+    width: 100vw;
+    height: 100vh;
+    padding: 0 25vh;
+    /* background-color: #08FD67; */
+    transition: all 0.3s ease;
+}
+/* 
+.content-title {
 }
 
-.info h1 {
-    font-family: Arial;
-    font-size: 1.5em;
-    font-weight: 700;
-    color: #000000;
-    line-height: 1;
-    text-align: center;
+.content-subtitle {
 }
 
-.frost, .frost-1, .frost-2, .frost-3{
+.content-description {
+}
+ */
+.link-TH {
+    color: inherit;      /* The color of the text */
+    text-decoration: none;   /* No underline */
+}
+
+/* content-1 */
+/* onScroll */
+
+.topRow-onScroll {
+    height: 10vh;
+    padding: 0 2vw;
+}
+
+.logo-onScroll {
+    font-size: 3em;
+    height: 8vh;
+}
+
+/* onScroll */
+
+
+
+
+
+
+
+
+
+
+.background {
+    z-index: -1;
     position: absolute;
-    width: 100%;
+    width: 100vw;
     height: 100%;
-    border-radius: 20px;
-    background: linear-gradient(94deg, rgba(217, 217, 217, 0.20) 10.07%, rgba(217, 217, 217, 0.10) 88.94%); 
-    /* border-image: linear-gradient(94deg, #FFFFFF 20%, #000CFF 20%); */
-}	
+    display: flex;
+    flex-direction: row;
+}
 
-.frost {
+.circle-1 {
+    background-color: #08C2FD;
+    width: 60vw;
+    height: 60vw;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-30%, -40%);
+}
+.circle-2 {
+    background-color: #08FD67;
+    width: 65vw;
+    height: 65vw;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(+80%, +50%);
+}
+
+.frost{
     z-index: 0;
-    border-width: 2px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #000CFF;
-    box-sizing: border-box;
-    border-style: solid;
-}	
-
-.frost-1 {
-    z-index: 1;
+    position: absolute;
+    width: 100vw;
+    height: 1000%;
+    background: linear-gradient(94deg, rgba(217, 217, 217, 0.20) 10.07%, rgba(217, 217, 217, 0.10) 30.94%); 
+    backdrop-filter: blur(8px);
 }
-.frost-2 {
-z-index: 2;
-}
-.frost-3 {
-    z-index: 3;
-}
-
