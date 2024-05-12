@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'Anurati';
+    src: url('src/Anurati.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #004c98;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.circle-1 {
+    background-color: #08C2FD;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-70%, -40%);
+}
+.circle-2 {
+    background-color: #08FD67;
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(+55%, +30%);
+}
+.card {
+    z-index: 0;
+    width: 30vw;
+    height: calc(0.6 * 30vw);
+    border-radius: 20px;
+    position: absolute;
+}
+
+.content {
+    z-index: 5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    /* background-color: #08C2FD; */
+}
+
+.logo {
+    width: 30%;
+    height: 90%;
+    /* background-color: antiquewhite; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Anurati;
+    font-size: 4em;
+    margin: 5% 0% 5% 5%;
+}
+.info {
+    width: 60%;
+    height: 90%;
+    /* background-color: #08fd41; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5% 5% 5% 5%;
+}
+
+.info h1 {
+    font-family: Arial;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1;
+    text-align: center;
+}
+
+.frost, .frost-1, .frost-2, .frost-3{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(94deg, rgba(217, 217, 217, 0.20) 10.07%, rgba(217, 217, 217, 0.10) 88.94%); 
+    /* border-image: linear-gradient(94deg, #FFFFFF 20%, #000CFF 20%); */
+}	
+
+.frost {
+    z-index: 0;
+    border-width: 2px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000CFF;
+    box-sizing: border-box;
+    border-style: solid;
+}	
+
+.frost-1 {
+    z-index: 1;
+}
+.frost-2 {
+z-index: 2;
+}
+.frost-3 {
+    z-index: 3;
+}
+
