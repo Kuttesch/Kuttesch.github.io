@@ -19,22 +19,27 @@
 body {
     background-color: #004c98;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    width: 100vw;
     overflow-x: hidden;
     overflow-y: scroll;
     user-select: none;
+    scroll-snap-type: y mandatory; /* Add this line */
+    scroll-behavior: smooth
 }
 /* general */
 /* Text */
 
-.title {
+.title{
     font-family: 'Roboto';
     font-size: 4em;
     color: #fff;
     text-align: center;
     transition: all 0.3s ease;
+    position: sticky;
 }
 
 .subtitle {
@@ -43,6 +48,7 @@ body {
     color: #fff;
     text-align: center;
     transition: all 0.3s ease;
+    position: sticky;
 }
 
 .description {
@@ -53,7 +59,12 @@ body {
     transition: all 0.3s ease;
 }
 
+.text {
+    position: sticky;
+    top: 0;
+}
 /* Text */
+
 /* topRow */
 
 .topRow {
@@ -83,7 +94,7 @@ body {
 /* topRow */
 /* content-1 */
 
-.content-1 {
+.content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,8 +102,9 @@ body {
     width: 100vw;
     height: 100vh;
     padding: 0 25vh;
-    /* background-color: #08FD67; */
+    background-color: #08FD67;
     transition: all 0.3s ease;
+    scroll-snap-align: start; /* Add this line */
 }
 /* 
 .content-title {
@@ -110,6 +122,13 @@ body {
 }
 
 /* content-1 */
+/* content-2 */
+
+.content-2{
+    background-color: #08C2FD;
+}
+
+/* content-2 */
 /* onScroll */
 
 .topRow-onScroll {
