@@ -23,11 +23,11 @@ body {
 }
 .circle-2 {
     background-color: #08FD67;
-    width: 20vw;
-    height: 20vw;
+    width: 25vw;
+    height: 25vw;
     border-radius: 50%;
     position: absolute;
-    transform: translate(+70%, +40%);
+    transform: translate(+55%, +30%);
 }
 .card {
     z-index: 0;
