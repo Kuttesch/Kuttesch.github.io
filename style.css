@@ -22,10 +22,10 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: auto;
+    height: 400vh;
     width: 100vw;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     user-select: none;
 }
 
@@ -97,8 +97,8 @@ html {
     padding: 0 25vh;
     /* background-color: #08FD67; */
     transition: all 0.3s ease;
-
     scroll-snap-align: start;
+    scroll-snap-stop: always;
      /* Add this line */
 }
 
@@ -106,7 +106,6 @@ html {
     color: inherit;      /* The color of the text */
     text-decoration: none;   /* No underline */
 }
-
 /* .content-1{
     background-color: #08fd49;
     
@@ -137,33 +136,58 @@ html {
     z-index: -1;
     position: absolute;
     width: 100vw;
-    height: 100%;
+    height: 400vh;
     display: flex;
     flex-direction: row;
+    overflow: hidden;
 }
 
-.circle-1 {
+.circle-blue {
     background-color: #08C2FD;
     width: 60vw;
     height: 60vw;
     border-radius: 50%;
     position: absolute;
+}
+
+.circle-blue-1 {
     transform: translate(-30%, -40%);
 }
-.circle-2 {
+
+.circle-blue-2 {
+    transform: translate(-30%, 140%);
+}
+
+.circle-blue-3 {
+    transform: translate(-30%, 280%);
+}
+
+.circle-green {
     background-color: #08FD67;
-    width: 65vw;
-    height: 65vw;
+    width: 60vw;
+    height: 60vw;
     border-radius: 50%;
     position: absolute;
+}
+
+.circle-green-1 {
     transform: translate(+80%, +50%);
 }
+
+.circle-green-2 {
+    transform: translate(+80%, +190%);
+
+}
+.circle-green-3 {
+    transform: translate(+80%, +340%);
+}
+
 
 .frost{
     z-index: 0;
     position: absolute;
     width: 100vw;
-    height: 1000%;
+    height: 400vh;
     background: linear-gradient(94deg, rgba(217, 217, 217, 0.20) 10.07%, rgba(217, 217, 217, 0.10) 30.94%); 
     backdrop-filter: blur(8px);
 }
