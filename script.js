@@ -13,9 +13,6 @@ window.onscroll = function() {
     }
 };
 window.onload = function() {
-    // Always show the popup
-    document.getElementById('popup').style.display = 'block';
-
     // Get the close button element
     var closeButton = document.getElementsByClassName('close')[0];
 
