@@ -37,7 +37,7 @@ html {
     .title{
         height: 10vh;
         width: 100vw;
-        background-color: aqua;
+        /* background-color: aqua; */
         font-family: 'Roboto';
         font-size: 4em;
         color: #fff;
@@ -87,7 +87,7 @@ html {
             text-align: center;
             line-height: 15vh;
             transition: all 0.3s ease;
-            background-color: #08fd49;
+            /* background-color: #08fd49; */
         }
 
             .logo-onScroll {
@@ -131,7 +131,7 @@ html {
                 height: 100%;
                 padding: 0 5vw;
                 transition: all 0.3s ease;
-                background-color: #08fd49;
+                /* background-color: #08fd49; */
             }
 
             .right {
@@ -143,11 +143,11 @@ html {
                 height: 100%;
                 padding: 2vh 2vw;
                 transition: all 0.3s ease;
-                background-color: #fd08d4;
+                /* background-color: #fd08d4; */
             }
 
         .landing{
-            background-color: #08fd49;
+            /* background-color: #08fd49; */
             justify-content: center;
             
         }
@@ -157,14 +157,14 @@ html {
             }
 
         .coding {
-            background-color: #fd0808;
+            /* background-color: #fd0808; */
         }
             .skills {
                 background-color: #0845fd;
                 border: 1px solid;
                 padding: 20px;
             }
-
+/* 
         .projects{
             background-color: #08C2FD;
         }
@@ -175,7 +175,7 @@ html {
 
         .about{
             background-color: #FD6708;
-        }
+        } */
 
     .background {
         z-index: -1;
