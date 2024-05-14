@@ -13,11 +13,8 @@ window.onscroll = function() {
     }
 };
 window.onload = function() {
-    if (!localStorage.getItem('firstLoadDone')) {
-        // Show the popup
-        document.getElementById('popup').style.display = 'block';
-        localStorage.setItem('firstLoadDone', 'true');
-    }
+    // Always show the popup
+    document.getElementById('popup').style.display = 'block';
 
     // Get the close button element
     var closeButton = document.getElementsByClassName('close')[0];
