@@ -12,3 +12,18 @@ window.onscroll = function() {
         topRow.classList.remove('topRow-onScroll');
     }
 };
+window.onload = function() {
+    if (!localStorage.getItem('firstLoadDone')) {
+        // Show the popup
+        document.getElementById('popup').style.display = 'block';
+        localStorage.setItem('firstLoadDone', 'true');
+    }
+
+    // Get the close button element
+    var closeButton = document.getElementsByClassName('close')[0];
+
+    // When the user clicks on the close button, close the popup
+    closeButton.onclick = function() {
+        document.getElementById('popup').style.display = 'none';
+    }
+}

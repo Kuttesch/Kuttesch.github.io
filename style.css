@@ -35,6 +35,50 @@ html {
     scroll-snap-type: y mandatory;
 }
 
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: linear-gradient(94deg, rgba(217, 217, 217, 0.20) 10.07%, rgba(217, 217, 217, 0.10) 30.94%); 
+    backdrop-filter: blur(8px);
+}
+
+.popup-content {
+    color: #fff;
+    font-size: 2em;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    width: 80%;
+    background: linear-gradient(94deg, rgba(217, 217, 217, 0.20) 30.07%, rgba(217, 217, 217, 0.10) 60.94%); 
+    backdrop-filter: blur(8px);
+}
+
+.welcome {
+    font-family: 'Anurati';
+}
+
+.close {
+    color: #ff0000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
     .title{
         height: 10vh;
         width: 100vw;/* 
@@ -157,9 +201,9 @@ html {
                 text-decoration: none;   /* No underline */
             }
 
-        .coding {
-            /* background-color: #fd0808; */
-        }
+        /* .coding {
+            background-color: #fd0808;
+        } */
             .skills {
                 /* background-color: #0845fd; */
                 display: flex;
