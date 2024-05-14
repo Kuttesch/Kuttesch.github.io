@@ -65,6 +65,11 @@ html {
     font-family: 'Anurati';
 }
 
+.link-mail {
+    color: inherit;      /* The color of the text */
+    text-decoration: none;   /* No underline */
+}
+
 .close {
     color: #ff0000;
     float: right;
