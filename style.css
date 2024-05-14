@@ -22,7 +22,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 400vh;
+    height: 500vh;
     width: 100vw;
     overflow-x: hidden;
     overflow-y: auto;
@@ -34,160 +34,205 @@ html {
     scroll-snap-type: y mandatory;
 }
 
-.title{
-    font-family: 'Roboto';
-    font-size: 4em;
-    color: #fff;
-    text-align: center;
-    transition: all 0.3s ease;
-}
+    .title{
+        height: 10vh;
+        width: 100vw;
+        background-color: aqua;
+        font-family: 'Roboto';
+        font-size: 4em;
+        color: #fff;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
 
-.subtitle {
-    font-family: 'Roboto';
-    font-size: 2em;
-    color: #fff;
-    text-align: center;
-    transition: all 0.3s ease;
-}
+        .subtitle {
+            font-family: 'Roboto';
+            font-size: 2em;
+            color: #fff;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
 
-.description {
-    font-family: 'Roboto';
-    font-size: 1.5em;
-    color: #fff;
-    text-align: center;
-    transition: all 0.3s ease;
-}
+        .description {
+            font-family: 'Roboto';
+            font-size: 1.5em;
+            color: #fff;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
 
-/* .text {
-    position: sticky;
-    top: 0;
-} */
+    .topRow {
+        position: fixed; top: 0; left: 0; right: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+        height: 20vh;
+        padding: 0 5vw;
+        transition: all 0.3s ease;
+    }
+        
+        .topRow-onScroll {
+            height: 10vh;
+            padding: 0 2vw;
+        }
 
-.topRow {
-    position: fixed; top: 0; left: 0; right: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100vw;
-    height: 20vh;
-    padding: 0 5vw;
-    /* background-color: #004c98; */
-    transition: all 0.3s ease;
-}
+        .logo {
+            position: relative;
+            height: 15vh;
+            font-family: 'Anurati';
+            font-size: 5em;
+            color: #fff;
+            text-align: center;
+            line-height: 15vh;
+            transition: all 0.3s ease;
+            background-color: #08fd49;
+        }
 
-.logo {
-    position: relative;
-    /* background-color: #08FD67; */
-    height: 15vh;
-    font-family: 'Anurati';
-    font-size: 5em;
-    color: #fff;
-    text-align: center;
-    transition: all 0.3s ease;
-}
+            .logo-onScroll {
+                font-size: 3em;
+                height: 10vh;
+                line-height: 10vh;
+            }
 
-.content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    padding: 0 25vh;
-    /* background-color: #08FD67; */
-    transition: all 0.3s ease;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-     /* Add this line */
-}
+    .site {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        padding: 0 25vh;
+        padding-bottom: 5vh;
+        transition: all 0.3s ease;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+    }
 
-.link-TH {
-    color: inherit;      /* The color of the text */
-    text-decoration: none;   /* No underline */
-}
-/* .content-1{
-    background-color: #08fd49;
-    
-}
-.content-2{
-    background-color: #08C2FD;
-}
+        .content {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 80%;
+            padding-top: 5vh;
+            padding-bottom: 5vh;
+            transition: all 0.3s ease;
+        }
 
-.content-3{
-    background-color: #FD08C2;
-}
+            .left{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+                height: 100%;
+                padding: 0 5vw;
+                transition: all 0.3s ease;
+                background-color: #08fd49;
+            }
 
-.content-4{
-    background-color: #FD6708;
-} */
+            .right {
+                display: grid;
+                gap: 2vh;
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr ;
+                width: 50%;
+                height: 100%;
+                padding: 2vh 2vw;
+                transition: all 0.3s ease;
+                background-color: #fd08d4;
+            }
 
-.topRow-onScroll {
-    height: 10vh;
-    padding: 0 2vw;
-}
+        .landing{
+            background-color: #08fd49;
+            justify-content: center;
+            
+        }
+            .link-TH {
+                color: inherit;      /* The color of the text */
+                text-decoration: none;   /* No underline */
+            }
 
-.logo-onScroll {
-    font-size: 3em;
-    height: 8vh;
-}
+        .coding {
+            background-color: #fd0808;
+        }
+            .skills {
+                background-color: #0845fd;
+                border: 1px solid;
+                padding: 20px;
+            }
 
-.background {
-    z-index: -1;
-    position: absolute;
-    width: 100vw;
-    height: 400vh;
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-}
+        .projects{
+            background-color: #08C2FD;
+        }
 
-.circle-blue {
-    background-color: #08C2FD;
-    width: 60vw;
-    height: 60vw;
-    border-radius: 50%;
-    position: absolute;
-}
+        .contact{
+            background-color: #FD08C2;
+        }
 
-.circle-blue-1 {
-    transform: translate(-30%, -40%);
-}
+        .about{
+            background-color: #FD6708;
+        }
 
-.circle-blue-2 {
-    transform: translate(-30%, 140%);
-}
+    .background {
+        z-index: -1;
+        position: absolute;
+        width: 100vw;
+        height: 400vh;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+    }
 
-.circle-blue-3 {
-    transform: translate(-30%, 280%);
-}
+        .circle-blue {
+            background-color: #08C2FD;
+            width: 60vw;
+            height: 60vw;
+            border-radius: 50%;
+            position: absolute;
+        }
 
-.circle-green {
-    background-color: #08FD67;
-    width: 60vw;
-    height: 60vw;
-    border-radius: 50%;
-    position: absolute;
-}
+            .circle-blue-1 {
+                transform: translate(-30%, -40%);
+            }
 
-.circle-green-1 {
-    transform: translate(+80%, +50%);
-}
+            .circle-blue-2 {
+                transform: translate(-30%, 140%);
+            }
 
-.circle-green-2 {
-    transform: translate(+80%, +190%);
+            .circle-blue-3 {
+                transform: translate(-30%, 280%);
+            }
 
-}
-.circle-green-3 {
-    transform: translate(+80%, +340%);
-}
+        .circle-green {
+            background-color: #08FD67;
+            width: 60vw;
+            height: 60vw;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+            .circle-green-1 {
+                transform: translate(+80%, +50%);
+            }
+
+            .circle-green-2 {
+                transform: translate(+80%, +190%);
+
+            }
+            .circle-green-3 {
+                transform: translate(+80%, +340%);
+            }
 
 
-.frost{
-    z-index: 0;
-    position: absolute;
-    width: 100vw;
-    height: 400vh;
-    background: linear-gradient(94deg, rgba(217, 217, 217, 0.20) 10.07%, rgba(217, 217, 217, 0.10) 30.94%); 
-    backdrop-filter: blur(8px);
-}
+        .frost{
+            z-index: 0;
+            position: absolute;
+            width: 100vw;
+            height: 400vh;
+            background: linear-gradient(94deg, rgba(217, 217, 217, 0.20) 10.07%, rgba(217, 217, 217, 0.10) 30.94%); 
+            backdrop-filter: blur(8px);
+        }
