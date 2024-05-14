@@ -27,6 +27,7 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
     user-select: none;
+    font-family: sans-serif;
 }
 
 html {
@@ -36,9 +37,9 @@ html {
 
     .title{
         height: 10vh;
-        width: 100vw;
-        /* background-color: aqua; */
-        font-family: 'Roboto';
+        width: 100vw;/* 
+        background-color: aqua; */
+        padding-top: 1vh;
         font-size: 4em;
         color: #fff;
         text-align: center;
@@ -46,7 +47,6 @@ html {
     }
 
         .subtitle {
-            font-family: 'Roboto';
             font-size: 2em;
             color: #fff;
             text-align: center;
@@ -54,7 +54,6 @@ html {
         }
 
         .description {
-            font-family: 'Roboto';
             font-size: 1.5em;
             color: #fff;
             text-align: center;
@@ -128,7 +127,8 @@ html {
                 justify-content: center;
                 align-items: center;
                 width: 50%;
-                height: 100%;
+                height: 80%;
+                margin: 2vh 2vw;
                 padding: 0 5vw;
                 transition: all 0.3s ease;
                 /* background-color: #08fd49; */
@@ -140,8 +140,9 @@ html {
                 grid-template-rows: 1fr 1fr;
                 grid-template-columns: 1fr 1fr 1fr ;
                 width: 50%;
-                height: 100%;
-                padding: 2vh 2vw;
+                height: 80%;
+                margin: 2vh 2vw;
+                padding: 0 2vw;
                 transition: all 0.3s ease;
                 /* background-color: #fd08d4; */
             }
@@ -160,10 +161,32 @@ html {
             /* background-color: #fd0808; */
         }
             .skills {
-                background-color: #0845fd;
-                border: 1px solid;
+                /* background-color: #0845fd; */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.2em;
+                border: 3px solid;
+                border-radius: 10px;
                 padding: 20px;
+                color: #fff;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                
+            background: linear-gradient(94deg, rgba(217, 217, 217, 0.20) 10.07%, rgba(217, 217, 217, 0.10) 30.94%); 
+            backdrop-filter: blur(8px);
             }
+                
+                .material-icons {
+                    font-size: 3em !important;
+                    color: #fff;
+                    padding-bottom: 1vh;
+                    transition: all 0.3s ease;
+                }
+
+                .material-icons:hover {
+                    font-size: 4em !important;
+                }
 /* 
         .projects{
             background-color: #08C2FD;
@@ -181,7 +204,7 @@ html {
         z-index: -1;
         position: absolute;
         width: 100vw;
-        height: 400vh;
+        height: 500vh;
         display: flex;
         flex-direction: row;
         overflow: hidden;
@@ -232,7 +255,7 @@ html {
             z-index: 0;
             position: absolute;
             width: 100vw;
-            height: 400vh;
+            height: 500vh;
             background: linear-gradient(94deg, rgba(217, 217, 217, 0.20) 10.07%, rgba(217, 217, 217, 0.10) 30.94%); 
             backdrop-filter: blur(8px);
         }
