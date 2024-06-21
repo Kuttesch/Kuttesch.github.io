@@ -66,3 +66,21 @@ nextButton.addEventListener('click', () => {
     }
 });
 
+function adjustScrollPosition(targetId) {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      const topRowHeight = document.querySelector('.topRow').offsetHeight; // Get fixed top row height
+      const adjustedScrollTop = targetElement.getBoundingClientRect().top + window.pageYOffset - topRowHeight;
+  
+      setTimeout(() => {
+        window.scrollTo({ top: adjustedScrollTop, behavior: 'smooth' });
+  
+        // Trigger scroll snap adjustment (if needed)
+        const targetSite = targetElement.closest('.site');
+        if (targetSite) {
+          const scrollSnapEvent = new Event('scrollsnapstop');
+          targetSite.dispatchEvent(scrollSnapEvent);
+        }
+      }, 100); // Adjust delay as needed
+    }
+  }
