@@ -231,10 +231,6 @@ html {
                     padding-bottom: 1vh;
                     transition: all 0.3s ease;
                 }
-
-                .coding-icons:hover {
-                    font-size: 4em !important;
-                }
             .skills:hover {
                 transform: scale(1.1);
             }
