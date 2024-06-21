@@ -51,7 +51,8 @@ html {
 }
 
 .popup-content {
-    color: #fff;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-size: 2em;
     padding: 20px;
     border: 1px solid #000000;
@@ -206,9 +207,7 @@ html {
                 text-decoration: none;   /* No underline */
             }
 
-        /* .coding {
-            background-color: #fd0808;
-        } */
+        /*Coding*/
             .skills {
                 /* background-color: #0845fd; */
                 display: flex;
@@ -221,22 +220,80 @@ html {
                 padding: 20px;
                 color: #fff;
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-                
-            background: linear-gradient(94deg, rgba(217, 217, 217, 0.20) 10.07%, rgba(217, 217, 217, 0.10) 30.94%); 
-            backdrop-filter: blur(8px);
+                background: linear-gradient(94deg, rgba(217, 217, 217, 0.20) 10.07%, rgba(217, 217, 217, 0.10) 30.94%); 
+                backdrop-filter: blur(8px);
+                transition: all 0.3s ease;
             }
                 
-                .material-icons {
+                .coding-icons {
                     font-size: 3em !important;
                     color: #fff;
                     padding-bottom: 1vh;
                     transition: all 0.3s ease;
                 }
 
-                .material-icons:hover {
+                .coding-icons:hover {
                     font-size: 4em !important;
                 }
-/* 
+            .skills:hover {
+                transform: scale(1.1);
+            }
+        /*Coding*/
+        /*Projects*/
+        .projects{
+            max-width: 400vw;
+        }
+            .content-projects {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 100vw;
+                height: 80%;
+                padding-top: 5vh;
+                padding-bottom: 5vh;
+                transition: all 0.3s ease;
+            }
+                .prev-next{
+                    color: #ffff;
+                    font-size: 3em !important;
+                }
+
+                .carousel{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 80vw;
+                    height: 80vh;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    color: #ffff;
+                    border: 3px solid;
+                    background: linear-gradient(94deg, rgba(217, 217, 217, 0.20) 10.07%, rgba(217, 217, 217, 0.10) 30.94%); 
+                    backdrop-filter: blur(8px);
+                    transition: all 0.3s ease;
+                }
+                    .carousel-content{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        width: 4*80vw;
+                        height: 100%;
+                        background-color: #004c98;
+                    }
+                        .carousel-item{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 80vw;
+                            height: 100%;
+                            font-size: 2em;
+                            color: #ffff;
+                            background-color: #980059;
+                        }
+                
+
+/*  
         .projects{
             background-color: #08C2FD;
         }
