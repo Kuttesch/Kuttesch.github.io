@@ -280,7 +280,6 @@ html {
                         justify-content: start;
                         width: 4 * 80vw;
                         height: 100%;
-                        background-color: #004c98;
                     }
                   
                         .carousel-item {
@@ -292,7 +291,8 @@ html {
                             align-items: center;
                             font-size: 2em;
                             color: #ffff;
-                            background-color: #980059;
+
+                            
                         }
                 
 

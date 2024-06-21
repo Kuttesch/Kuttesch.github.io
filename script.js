@@ -21,3 +21,48 @@ window.onload = function() {
         document.getElementById('popup').style.display = 'none';
     }
 }
+const prevButton = document.getElementById('prev-projects');
+const nextButton = document.getElementById('next-projects');
+const carouselContent = document.querySelector('.carousel-content');
+const carouselItems = carouselContent.querySelectorAll('.carousel-item');
+
+// Calculate item width
+const itemWidth = carouselContent.offsetWidth;
+
+// Event listeners for prev/next buttons
+prevButton.addEventListener('click', () => {
+    const currentScrollLeft = carouselContent.scrollLeft;
+    const firstItemLeft = carouselItems[0].offsetLeft;
+
+    if (currentScrollLeft <= firstItemLeft) {
+        // Reset to the last item (without smooth transition to avoid visual glitch)
+        carouselContent.scrollTo({
+            left: carouselContent.scrollWidth - itemWidth, // Scroll to the very end
+            behavior: 'smooth' // Instant scroll
+        });
+    } else {
+        carouselContent.scrollBy({
+            left: -itemWidth,
+            behavior: 'smooth'
+        });
+    }
+});
+
+nextButton.addEventListener('click', () => {
+    const currentScrollLeft = carouselContent.scrollLeft;
+    const lastItemRight = carouselItems[carouselItems.length - 1].offsetLeft + carouselItems[carouselItems.length - 1].offsetWidth;
+
+    if (currentScrollLeft + carouselContent.offsetWidth >= lastItemRight) {
+        // Reset to the first item
+        carouselContent.scrollTo({
+            left: 0,
+            behavior: 'smooth'
+        });
+    } else {
+        carouselContent.scrollBy({
+            left: itemWidth,
+            behavior: 'smooth'
+        });
+    }
+});
+
