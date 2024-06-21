@@ -254,9 +254,18 @@ html {
                 padding-bottom: 5vh;
                 transition: all 0.3s ease;
             }
-                .prev-next{
+                .prev-next .material-icons {
                     color: #ffff;
-                    font-size: 3em !important;
+                    font-size: 5em !important;
+                    transition: all 0.3s ease;
+                    width: 10vw;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .prev-next .material-icons:hover {
+                    font-size: 6em !important;
                 }
 
                 .carousel{
@@ -283,17 +292,30 @@ html {
                     }
                   
                         .carousel-item {
+                            position: relative;
                             scroll-snap-align: start;
                             flex: 0 0 80vw;
                             height: 100%;
                             display: flex;
+                            flex-direction: column;
                             justify-content: center;
                             align-items: center;
+                            width: 80vw;  
                             font-size: 2em;
-                            color: #ffff;
-
-                            
+                            color: #ffff; 
                         }
+                            .carousel-item .carousel-icon {
+                                position: absolute;
+                                top: 10px;
+                                left: 10px;
+                              }
+                            .carousel-icons {
+                                font-size: 1em;
+                                transition: all 0.3s ease;
+                            }  
+                            .carousel-icons:hover {
+                                font-size: 1.2em !important;
+                            }
                 
 
 /*  
