@@ -266,27 +266,30 @@ html {
                     width: 80vw;
                     height: 80vh;
                     border-radius: 10px;
-                    overflow: hidden;
                     color: #ffff;
                     border: 3px solid;
                     background: linear-gradient(94deg, rgba(217, 217, 217, 0.20) 10.07%, rgba(217, 217, 217, 0.10) 30.94%); 
                     backdrop-filter: blur(8px);
                     transition: all 0.3s ease;
                 }
-                    .carousel-content{
+                    .carousel-content {
+                        scroll-snap-type: x mandatory;
+                        overflow-x: scroll;
                         display: flex;
-                        justify-content: flex-start;
-                        align-items: center;
-                        width: 4*80vw;
+                        flex-direction: row;
+                        justify-content: start;
+                        width: 4 * 80vw;
                         height: 100%;
                         background-color: #004c98;
                     }
-                        .carousel-item{
+                  
+                        .carousel-item {
+                            scroll-snap-align: start;
+                            flex: 0 0 80vw;
+                            height: 100%;
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            width: 80vw;
-                            height: 100%;
                             font-size: 2em;
                             color: #ffff;
                             background-color: #980059;
