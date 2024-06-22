@@ -202,17 +202,24 @@ html::-webkit-scrollbar {
                 transition: all 0.3s ease;
                 /* background-color: #fd08d4; */
             }
-
+        /*Landing*/
         .landing{
             /* background-color: #08fd49; */
+            display: flex;
+            flex-direction: column;
             justify-content: center;
             
         }
+            .title-landing, .text-landing {
+                height: auto;
+            }
+
+
             .link-TH {
                 color: inherit;      /* The color of the text */
                 text-decoration: none;   /* No underline */
             }
-
+        /*Landing*/
         /*Coding*/
             .skills {
                 /* background-color: #0845fd; */
