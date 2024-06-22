@@ -1,7 +1,7 @@
 // ----- CAROUSEL AUTOSCROLLING -----
 // ----- Currently not in use -----
 /* 
-const carouselContent = document.querySelector('.carousel-content');
+const carouselContent = document.querySelector('.carousel');
 const carouselItems = document.querySelectorAll('.carousel-item');
 
 // Calculate item width only once
@@ -61,7 +61,7 @@ window.onscroll = function () {
   // ----- CAROUSEL FUNCTIONALITY -----
   const prevButton = document.getElementById('prev-projects');
   const nextButton = document.getElementById('next-projects');
-  const carouselContent = document.querySelector('.carousel-content');
+  const carouselContent = document.querySelector('.carousel');
   const carouselItems = carouselContent.querySelectorAll('.carousel-item');
   const itemWidth = carouselContent.offsetWidth; // Calculate item width once
   
