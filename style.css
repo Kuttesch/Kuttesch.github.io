@@ -30,10 +30,16 @@ body {
     font-family: sans-serif;
 }
 
+
 html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
+
+html::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+  }
 
 .popup {
     display: flex;
@@ -250,31 +256,48 @@ html {
                 padding-bottom: 5vh;
                 transition: all 0.3s ease;
             }
-                .prev-next .material-icons {
-                    color: #ffff;
-                    font-size: 5em !important;
-                    transition: all 0.3s ease;
-                    width: 10vw;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+
+                .prev-next {
+                    z-index: 1;
+                    position: absolute;
                 }
 
-                .prev-next .material-icons:hover {
-                    font-size: 6em !important;
-                }
+                    .prev-projects {
+                        left: 0;
+                    }
+                    
+                    .next-projects {
+                        right: 0;
+                    }
+
+                    .prev-next .material-icons {
+                        color: #ffff;
+                        font-size: 5em !important;
+                        transition: all 0.3s ease;
+                        width: 5vw;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .prev-next .material-icons:hover {
+                        font-size: 6em !important;
+                        
+                    }
 
                 .carousel{
+                    position: relative;
+                    z-index: 0;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 80vw;
+                    width: 100vw;
                     height: 80vh;
-                    border-radius: 10px;
+                    /* border-radius: 10px;
                     color: #ffff;
                     border: 3px solid;
                     background: linear-gradient(94deg, rgba(217, 217, 217, 0.20) 10.07%, rgba(217, 217, 217, 0.10) 30.94%); 
-                    backdrop-filter: blur(8px);
+                    backdrop-filter: blur(8px); */
                     transition: all 0.3s ease;
                 }
                     .carousel-content {
@@ -283,20 +306,25 @@ html {
                         display: flex;
                         flex-direction: row;
                         justify-content: start;
-                        width: 4 * 80vw;
+                        width: 4 * 100vw;
                         height: 100%;
+                        scrollbar-width: none; /* Hide scrollbar for Firefox */
                     }
+
+                    .carousel-content::-webkit-scrollbar {
+                        display: none; /* Hide scrollbar for WebKit browsers */
+                      }
                   
                         .carousel-item {
                             position: relative;
                             scroll-snap-align: start;
-                            flex: 0 0 80vw;
+                            flex: 0 0 100vw;
                             height: 100%;
                             display: flex;
                             flex-direction: column;
                             justify-content: center;
                             align-items: center;
-                            width: 80vw;  
+                            width: 100vw;  
                             font-size: 2em;
                             color: #ffff; 
                         }
