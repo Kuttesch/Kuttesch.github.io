@@ -1,11 +1,4 @@
 /* general */
-@font-face {
-    font-family: 'Anurati';
-    src: url('src/Anurati.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -69,7 +62,7 @@ html::-webkit-scrollbar {
 }
 
 .welcome {
-    font-family: 'Anurati';
+    font-family: "Audiowide", sans-serif;
 }
 
 .link-mail {
@@ -136,8 +129,7 @@ html::-webkit-scrollbar {
         .logo {
             position: relative;
             height: 15vh;
-            font-family: 'Anurati';
-            font-size: 5em;
+            font-family: "Audiowide", sans-serif;            font-size: 5em;
             color: #fff;
             text-align: center;
             line-height: 15vh;
@@ -300,11 +292,6 @@ html::-webkit-scrollbar {
                     align-items: center;
                     width: 100vw;
                     height: 80vh;
-                    /* border-radius: 10px;
-                    color: #ffff;
-                    border: 3px solid;
-                    background: linear-gradient(94deg, rgba(217, 217, 217, 0.20) 10.07%, rgba(217, 217, 217, 0.10) 30.94%); 
-                    backdrop-filter: blur(8px); */
                     transition: all 0.3s ease;
                 }
                     .carousel {
