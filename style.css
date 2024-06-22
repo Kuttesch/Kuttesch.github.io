@@ -339,7 +339,7 @@ html::-webkit-scrollbar {
                                 position: absolute;
                                 top: 10px;
                                 left: 20px;
-                                background-color: #08FD67;
+                                /* background-color: #08FD67; */
 
                               }
                             .carousel-icons {
@@ -361,16 +361,14 @@ html::-webkit-scrollbar {
                                 justify-content: flex-start;
                                 align-items: center;
                             }
-                                .carousel-right{
-                                    width: 50%;
-                                    height: 100%;
-                                    background-color: #004c98;
-                                }
-
-                                .carousel-left {
+                                .carousel-right, .carousel-left {
                                     height: 100%;
                                     width: 50%;
-                                    background-color: #780000;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    /* background-color: #780000; */
                                 }
                             
 

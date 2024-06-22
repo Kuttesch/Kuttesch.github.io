@@ -33,61 +33,40 @@ carouselContent.addEventListener('mouseleave', startAutoScroll);
 startAutoScroll();
 
  */
-
 // ----- ON SCROLL FUNCTIONS -----
 window.onscroll = function () {
     const logo = document.querySelector('.logo');
     const topRow = document.querySelector('.topRow');
     const scrollPosition = window.pageYOffset;
   
-    // Toggle classes based on scroll position (concise version)
     logo.classList.toggle('logo-onScroll', scrollPosition > 0);
     topRow.classList.toggle('topRow-onScroll', scrollPosition > 0);
   };
   
   
-  // ----- ON LOAD FUNCTIONS -----
-  window.onload = function () {
-    // Popup Handling
-    const closeButton = document.getElementsByClassName('close')[0];
-    if (closeButton) {
-      closeButton.onclick = function () {
-        document.getElementById('popup').style.display = 'none';
-      };
-    }
-  };
-  
-  
   // ----- CAROUSEL FUNCTIONALITY -----
-  const prevButton = document.getElementById('prev-projects');
-  const nextButton = document.getElementById('next-projects');
   const carouselContent = document.querySelector('.carousel');
   const carouselItems = carouselContent.querySelectorAll('.carousel-item');
-  const itemWidth = carouselContent.offsetWidth; // Calculate item width once
+  const itemWidth = carouselContent.offsetWidth;
   
-  // Carousel Navigation Functions
-  function scrollCarouselTo(targetIndex) {
-    const targetScrollLeft = carouselItems[targetIndex].offsetLeft;
+  // Scroll to a specific carousel item
+  function scrollCarouselTo(index) {
+    const targetScrollLeft = carouselItems[index].offsetLeft;
     carouselContent.scrollTo({ left: targetScrollLeft, behavior: 'smooth' });
   }
   
-  function scrollCarouselBy(delta) {
-    carouselContent.scrollBy({ left: delta * itemWidth, behavior: 'smooth' });
-  }
-  
   // Event Listeners for Carousel Buttons
-  prevButton.addEventListener('click', () => {
+  document.getElementById('prev-projects').addEventListener('click', () => {
     const currentItemIndex = Math.round(carouselContent.scrollLeft / itemWidth);
     const targetIndex = (currentItemIndex === 0) ? carouselItems.length - 1 : currentItemIndex - 1;
-    scrollCarouselTo(targetIndex); 
+    scrollCarouselTo(targetIndex);
   });
   
-  nextButton.addEventListener('click', () => {
+  document.getElementById('next-projects').addEventListener('click', () => {
     const currentItemIndex = Math.round(carouselContent.scrollLeft / itemWidth);
     const targetIndex = (currentItemIndex === carouselItems.length - 1) ? 0 : currentItemIndex + 1;
     scrollCarouselTo(targetIndex);
   });
-  
   
   // ----- SMOOTH SCROLL TO TARGET FUNCTION -----
   function adjustScrollPosition(targetId) {
@@ -96,9 +75,14 @@ window.onscroll = function () {
       const topRowHeight = document.querySelector('.topRow').offsetHeight;
       const adjustedScrollTop = targetElement.getBoundingClientRect().top + window.pageYOffset - topRowHeight;
   
+      window.scrollTo({ top: adjustedScrollTop, behavior: 'smooth' });
+  
+      // Scroll snap adjustment (if needed)
       setTimeout(() => {
-        window.scrollTo({ top: adjustedScrollTop, behavior: 'smooth' });
-        // (Scroll snap adjustment logic remains the same)
+        const scrollSnapDelta = window.scrollY % document.documentElement.clientHeight;
+        if (scrollSnapDelta > 0) {
+          window.scrollBy({ top: -scrollSnapDelta });
+        }
       }, 100); // Adjust delay as needed
     }
   }
