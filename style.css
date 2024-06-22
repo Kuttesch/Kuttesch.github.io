@@ -331,7 +331,7 @@ html::-webkit-scrollbar {
                             .carousel-item .carousel-icon {
                                 position: absolute;
                                 top: 10px;
-                                left: 10px;
+                                left: 20px;
                               }
                             .carousel-icons {
                                 font-size: 1em;
