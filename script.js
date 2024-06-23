@@ -36,18 +36,27 @@ startAutoScroll();
 // ----- POPUP FUNCTIONALITY -----
 var popup = document.getElementById("popup");
 var span = document.getElementsByClassName("close")[0];
+var dontShowAgain = document.getElementById("dontShowAgain");
 
-// When the user clicks on <span> (x), close the popup
-span.onclick = function() {
-    popup.style.display = "none";
+// Load previous checkbox state from localStorage
+if (localStorage.getItem('dontshowPopup') === 'true') {
+  popup.style.display = "none";
+} else {
+  popup.style.display = "flex";
 }
 
-// When the user clicks anywhere outside of the popup, close it
-window.onclick = function(event) {
-    if (event.target == popup) {
-        popup.style.display = "none";
-    }
+// Function to close the popup
+function closePopup() {
+  popup.style.display = "none";
+  localStorage.setItem('dontshowPopup', dontShowAgain.checked); // Store the correct state
 }
+
+span.onclick = closePopup;
+window.onclick = function (event) {
+  if (event.target == popup) {
+    closePopup();
+  }
+};
 
 // ----- ON SCROLL FUNCTIONS -----
 window.addEventListener('scroll', function () {
