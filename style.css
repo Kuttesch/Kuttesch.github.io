@@ -169,7 +169,7 @@ html::-webkit-scrollbar {
             transition: all 0.3s ease;
         }
 
-            .left{
+            .left-coding{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -182,7 +182,7 @@ html::-webkit-scrollbar {
                 /* background-color: #08fd49; */
             }
 
-            .right {
+            .right-coding {
                 display: grid;
                 gap: 2vh;
                 grid-template-rows: 1fr 1fr;
@@ -292,6 +292,7 @@ html::-webkit-scrollbar {
                     align-items: center;
                     width: 100vw;
                     height: 80vh;
+                    overflow: hidden !important;
                     transition: all 0.3s ease;
                 }
                     .carousel {
@@ -321,6 +322,7 @@ html::-webkit-scrollbar {
                             width: 100vw;  
                             font-size: 2em;
                             color: #ffff; 
+                            
                         }
                             .carousel-item .carousel-icon {
                                 position: absolute;
@@ -338,7 +340,7 @@ html::-webkit-scrollbar {
                             } */
 
                             .carousel-content {
-                                height: 90%;
+                                height: 80%;
                                 width: 90%;
                                 margin-left: 5%;
                                 margin-right: 5%;
@@ -347,9 +349,10 @@ html::-webkit-scrollbar {
                                 flex-direction: row;
                                 justify-content: flex-start;
                                 align-items: center;
+                                
                             }
                                 .carousel-right, .carousel-left {
-                                    height: 100%;
+                                    height: auto;
                                     width: 50%;
                                     display: flex;
                                     flex-direction: column;
@@ -358,6 +361,65 @@ html::-webkit-scrollbar {
                                     /* background-color: #780000; */
                                 }
                             
+                                .carousel-left {
+                                    display: grid;
+                                    gap: 2vh;
+                                    grid-template-rows: 1fr 1fr;
+                                    grid-template-columns: 1fr 1fr;
+                                }
+
+                                .carousel-right {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    padding: 5%;
+                                }
+
+                                    .carousel-text{
+                                        font-size: 1em;
+                                        color: #fff;
+                                        text-align: center;
+                                        transition: all 0.3s ease;
+                                    }
+
+                                    .carousel-left-content {
+                                        /* background-color: #0845fd; */
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        align-items: center;
+                                        font-size: 1.2em;
+                                        border: 3px solid;
+                                        border-radius: 10px;
+                                        height: 95%;
+                                        width: 95%;
+                                        color: #fff;
+                                        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                                        background: linear-gradient(94deg, rgba(217, 217, 217, 0.20) 10.07%, rgba(217, 217, 217, 0.10) 30.94%); 
+                                        backdrop-filter: blur(8px);
+                                        transition: all 0.3s ease;
+
+                                        padding: 5px;
+                                    }
+
+                                        .carousel-left-content:hover {
+                                            transform: scale(1.1);
+                                        }
+
+                                        .project-title {
+                                            font-size: 0.8em;
+                                            color: #fff;
+                                            text-align: center;
+                                            transition: all 0.3s ease;
+                                        }
+
+                                        .project-text {
+                                            font-size: 0.5em;
+                                            color: #fff;
+                                            text-align: center;
+                                            transition: all 0.3s ease;
+                                        }
 
 /*  
         .projects{
