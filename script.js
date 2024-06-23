@@ -117,5 +117,48 @@ function adjustScrollPosition(targetId) {
   }
 }
 
-// ---- Favicon Update On Page Load----
-updateFavicon();
+
+// --- Get GitHub Repo Info ---
+async function getGitHubRepoInfo(repoLink) {
+  try {
+    const repoUrlParts = repoLink.split('/');
+    const repoUrl = `https://api.github.com/repos/${repoUrlParts[3]}/${repoUrlParts[4]}`;
+    const response = await fetch(repoUrl);
+    const data = await response.json();
+
+    console.log("fetched data:", data);
+
+    return {
+      name: data.name || "No name available",
+      description: data.description || "No description available"
+    };
+  } catch (error) {
+    console.error("Error fetching GitHub data:", error);
+    return {
+      name: "Error fetching name",
+      description: "Error fetching description"
+    };
+  }
+}
+
+// Function to update carousel content based on GitHub data
+async function updateCarouselWithGitHubData() {
+  const carouselLeftContents = document.querySelectorAll('.carousel-left-content');
+
+  for (const content of carouselLeftContents) {
+    const linkElement = content.querySelector('a'); // Find the link element (if it exists)
+
+    if (linkElement && linkElement.href.includes('github.com')) {
+      const repoInfo = await getGitHubRepoInfo(linkElement.href);
+
+      const titleElement = content.querySelector('.project-title');
+      const textElement = content.querySelector('.project-text');
+
+      if (titleElement) titleElement.textContent = repoInfo.name;
+      if (textElement) textElement.textContent = repoInfo.description;
+    }
+  }
+}
+
+// Call the update function when the page loads
+updateCarouselWithGitHubData(); 
