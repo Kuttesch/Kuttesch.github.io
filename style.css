@@ -151,8 +151,8 @@ html::-webkit-scrollbar {
         align-items: center;
         width: 100vw;
         height: 100vh;
-        padding: 0 25vh;
-        padding-bottom: 5vh;
+        padding: 0 25vh;/* 
+        padding-bottom: 5vh; */
         transition: all 0.3s ease;
         scroll-snap-align: start;
         scroll-snap-stop: always;
@@ -292,7 +292,7 @@ html::-webkit-scrollbar {
                     justify-content: center;
                     align-items: center;
                     width: 100vw;
-                    height: 80vh;
+                    height: 100%;
                     overflow: hidden !important;
                     transition: all 0.3s ease;
                 }
@@ -305,6 +305,7 @@ html::-webkit-scrollbar {
                         width: 4 * 100vw;
                         height: 100%;
                         scrollbar-width: none; /* Hide scrollbar for Firefox */
+                        background-color: #000000;
                     }
 
                     .carousel::-webkit-scrollbar {
@@ -322,7 +323,7 @@ html::-webkit-scrollbar {
                             align-items: center;
                             width: 100vw;  
                             font-size: 2em;
-                            color: #ffff; 
+                            color: #ffff;
                             
                         }
                             .carousel-item .carousel-icon {
