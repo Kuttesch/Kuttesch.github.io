@@ -138,8 +138,8 @@ async function getGitHubRepoInfo(repoLink) {
     console.log("fetched data:", data);
 
     return {
-      name: data.name || "No name available",
-      description: data.description || "No description available"
+      name: data.name || "Error fetching",
+      description: data.description || "No description or/and name available"
     };
   } catch (error) {
     console.error("Error fetching GitHub data:", error);

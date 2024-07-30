@@ -208,7 +208,7 @@ html::-webkit-scrollbar {
             }
 
 
-            .link-TH {
+            .link-TH, .link-git, .link-logo {
                 color: inherit;      /* The color of the text */
                 text-decoration: none;   /* No underline */
             }
@@ -305,7 +305,7 @@ html::-webkit-scrollbar {
                         width: 4 * 100vw;
                         height: 100%;
                         scrollbar-width: none; /* Hide scrollbar for Firefox */
-                        background-color: #000000;
+                        /* background-color: #000000; */
                     }
 
                     .carousel::-webkit-scrollbar {
@@ -316,7 +316,7 @@ html::-webkit-scrollbar {
                             position: relative;
                             scroll-snap-align: start;
                             flex: 0 0 100vw;
-                            height: 100%;
+                            height: 95%;
                             display: flex;
                             flex-direction: column;
                             justify-content: center;
@@ -374,9 +374,23 @@ html::-webkit-scrollbar {
                                     display: flex;
                                     flex-direction: column;
                                     justify-content: center;
-                                    align-items: center;
+                                    align-items: start;
                                     padding: 5%;
                                 }
+
+                                .carousel-text h1 {
+                                    font-size: 1.5em;
+                                    color: #fff;
+                                    text-align: center;
+                                    transition: all 0.3s ease;
+                                }
+
+                                .carousel-text p {
+                                    font-size: 0.8em;
+                                    color: #fff;
+                                    text-align: left;
+                                    transition: all 0.3s ease;
+                                }    
 
                                     .carousel-text{
                                         font-size: 1em;
